@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping With JS</title>
+    <title>Shopping With JS Dom</title>
+    <!-- DaisyUi File Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
+    <!-- Tailwind CSS File Link -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
-      <div class="navbar bg-base-100 shadow-2xl lg:px-12">
+      <div class="navbar bg-base-100 shadow-2xl px-4 lg:px-12">
         <div class="flex-1">
           <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
@@ -50,25 +52,25 @@
       </div>
     </header>
     <main>
-      <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+      <section class="flex flex-col md:flex-row lg:flex-row gap-4 px-4 lg:px-12">
         <div
-          class="products-cetails w-full md:w-[60%] lg:w-[60%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          class="products-details w-full md:w-[60%] lg:w-[60%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           <!-- first card  -->
           <div class="card card-compact w-full bg-base-100 shadow-xl">
             <figure>
-              <img class="w-full h-40" src="./img/coffee.jpg" alt="Shoes" />
+              <img class="w-full h-40" src="./images/coffee.jpg" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title" id="first-name">Coffee JS</h2>
+              <h2 class="card-title" id="name-coffee">Coffee JS</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Labore, omnis.
               </p>
-              <p>Price: $<span id="first-price">110</span></p>
-              <p>Quantity: <span id="first-quantity">5</span></p>
+              <p>Price: $<span id="price-coffee">110</span></p>
+              <p>Quantity: <span id="quantity-coffee">5</span></p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" id="first-card">
+                <button class="btn btn-primary" id="btn-coffee">
                   Add to Cart
                 </button>
               </div>
@@ -77,18 +79,18 @@
           <!-- second card  -->
           <div class="card card-compact w-full bg-base-100 shadow-xl">
             <figure>
-              <img class="w-full h-40" src="./img/heart_js.jpg" alt="Shoes" />
+              <img class="w-full h-40" src="./images/heart_js.jpg" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Heart JS</h2>
+              <h2 class="card-title" id="name-heart">Heart JS</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Labore, omnis.
               </p>
-              <p>Price: $<span>200</span></p>
-              <p>Quantity: <span>10</span></p>
+              <p>Price: $<span id="price-heart">200</span></p>
+              <p>Quantity: <span id="quantity-heart">10</span></p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" id="second-card">
+                <button class="btn btn-primary" id="btn-heart">
                   Add to Cart
                 </button>
               </div>
@@ -97,18 +99,18 @@
           <!-- third card  -->
           <div class="card card-compact w-full bg-base-100 shadow-xl">
             <figure>
-              <img class="w-full h-40" src="./img/panda.png" alt="Shoes" />
+              <img class="w-full h-40" src="./images/panda.png" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title" id="third-title">Panda JS</h2>
+              <h2 class="card-title" id="name-panda">Panda JS</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Labore, omnis.
               </p>
-              <p>Price: $<span id="third-price">250</span></p>
-              <p>Quantity: <span id="third-quantity">5</span></p>
+              <p>Price: $<span id="price-panda">250</span></p>
+              <p>Quantity: <span id="quantity-panda">5</span></p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" id="third-card">
+                <button class="btn btn-primary" id="btn-panda">
                   Add to Cart
                 </button>
               </div>
@@ -117,18 +119,18 @@
           <!-- fourth card  -->
           <div class="card card-compact w-full bg-base-100 shadow-xl">
             <figure>
-              <img class="w-full h-40" src="./img/umbrella.png" alt="Shoes" />
+              <img class="w-full h-40" src="./images/umbrella.png" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Umbrella JS</h2>
+              <h2 class="card-title" id="name-umbrella">Umbrella JS</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Labore, omnis.
               </p>
-              <p>Price: $<span>100</span></p>
-              <p>Quantity: <span>3</span></p>
+              <p>Price: $<span id="price-umbrella">100</span></p>
+              <p>Quantity: <span id="quantity-umbrella">3</span></p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" id="second-last">
+                <button class="btn btn-primary" id="btn-umbrella">
                   Add to Cart
                 </button>
               </div>
@@ -137,10 +139,10 @@
           <!-- last card  -->
           <div class="card card-compact w-full bg-base-100 shadow-xl">
             <figure>
-              <img class="w-full h-40" src="./img/vue-js.jpg" alt="Shoes" />
+              <img class="w-full h-40" src="./images/vue-js.jpg" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title" id="last-title">Vue JS</h2>
+              <h2 class="card-title" id="name-vue">Vue JS</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Labore, omnis.
@@ -149,18 +151,18 @@
               <p>Quantity: <span>3</span></p> -->
               <input
                 type="text"
-                id="first-input"
+                id="price-vue"
                 placeholder="Price"
                 class="input input-bordered input-sm w-full max-w-xs"
               />
               <input
                 type="text"
+                id="quantity-vue"
                 placeholder="Quantity"
-                id="second-input"
                 class="input input-bordered input-sm w-full max-w-xs"
               />
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" id="last-card">
+                <button class="btn btn-primary" id="btn-vue">
                   Add to Cart
                 </button>
               </div>
@@ -171,17 +173,17 @@
         <!-- cart details div  -->
         <div class="cart-details w-full md:w-[40%] lg:w-[40%] mx-auto">
           <h1 class="text-3xl text-center font-bold underline mt-5">
-            ToTal Products: <span id="total-product">0</span>
+            Total Products List:
           </h1>
-          <div class="overflow-x-auto">
+          <div class="overflow-x-auto mt-3">
             <table class="table w-full">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Total</th>
+                  <th class="capitalize text-lg">No</th>
+                  <th class="capitalize text-lg">Name</th>
+                  <th class="capitalize text-lg">Price</th>
+                  <th class="capitalize text-lg">Quantity</th>
+                  <th class="capitalize text-lg">Total</th>
                 </tr>
               </thead>
               <tbody id="table-container">
@@ -197,6 +199,8 @@
         </div>
       </section>
     </main>
-    <script src="./index.js"></script>
+
+    <!-- Custom JS File Link -->
+    <script src="./js/shopping.js"></script>
   </body>
 </html>
